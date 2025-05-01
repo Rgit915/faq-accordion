@@ -106,3 +106,23 @@ main {
   max-width: 600px;
   text-align: left;
 }
+
+.answer {
+  display: none;
+}
+
+.question[aria-expanded="true"] + .answer {
+  display: block;
+}
+
+.question .minus {
+  display: none;
+}
+
+.question[aria-expanded="true"] .plus {
+  display: none;
+}
+
+.question[aria-expanded="true"] .minus {
+  display: inline;
+}
