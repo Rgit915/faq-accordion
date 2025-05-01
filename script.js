@@ -1,15 +1,24 @@
 const questions = document.querySelectorAll('.question');
 
-questions.forEach((btn) => {
-  btn.addEventListener('click', () => {
-    const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+questions.forEach((question) => {
+  const toggleAnswer = () => {
+    const isExpanded = question.getAttribute('aria-expanded') === 'true';
 
-    // Close all questions
+    // Collapse all questions
     questions.forEach((q) => q.setAttribute('aria-expanded', 'false'));
 
-    // Expand the clicked one only if it wasn't already expanded
+    // Expand only if not already expanded
     if (!isExpanded) {
-      btn.setAttribute('aria-expanded', 'true');
+      question.setAttribute('aria-expanded', 'true');
+    }
+  };
+
+  question.addEventListener('click', toggleAnswer);
+
+  question.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault(); // Prevent scrolling on space
+      toggleAnswer();
     }
   });
 });

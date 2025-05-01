@@ -41,7 +41,7 @@ main {
   margin: 9rem 1.5rem;
 }
 
-hr{
+hr {
   height: 1px;
   background: var(--color-light-pink);
   border: none;
@@ -139,6 +139,10 @@ hr{
 
 .question[aria-expanded="true"] .minus {
   display: inline;
+}
+
+.question:focus {
+  outline: 2px solid var(--color-pale-purple);
 }
 
 /* Responsive layout */
