@@ -140,3 +140,28 @@ hr{
 .question[aria-expanded="true"] .minus {
   display: inline;
 }
+
+/* Responsive layout */
+@media (min-width: 768px) {
+  body {
+    background-image: url(./assets/images/background-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .faq-container .header img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .faq-container .header h1 {
+    font-size: 3.5rem;
+  }
+
+  .questions-container .question p {
+    font-size: 1.12rem;
+  }
+
+  .questions-container .answer p {
+    font-size: 1rem;
+  }
+}
